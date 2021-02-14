@@ -1,10 +1,10 @@
 import "./styles.css";
-import UseStateExample from "./useState/UseStateExample";
+import ComponentDidMount from "./useEffect/ComponentDidMount";
 
 export default function App() {
   return (
     <div className="App">
-      <UseStateExample />
+      <ComponentDidMount />
     </div>
   );
 }
