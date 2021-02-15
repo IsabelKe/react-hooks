@@ -1,10 +1,10 @@
 import "./styles.css";
-import ComponentDidMount from "./useEffect/ComponentDidMount";
+import SetTimer from "./useEffect/SetTimer";
 
 export default function App() {
   return (
     <div className="App">
-      <ComponentDidMount />
+      <SetTimer />
     </div>
   );
 }

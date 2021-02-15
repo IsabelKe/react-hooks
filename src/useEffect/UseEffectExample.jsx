@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
-export default function UseEffectExample() {
-  //the callback function will only be executed once after
-  //the first rendering
+export default function UseEffectExample(name) {
+  //the callback function will be executed  after
+  //each rendering if the name value is diffferent between renderings
   useEffect(() => {
     //update the DOM
     document.title = "Use useEffect to change DOM";
     //url
-    const url = "https://api.github.com/users/QuincyLarson";
+    const url = "https://api.github.com/users/" + { name };
     //fetch user QuincyLarson
     fetch(url)
       .then((resp) => {
@@ -17,7 +17,7 @@ export default function UseEffectExample() {
         //print it out
         console.log(user.login);
       });
-  }, []);
+  }, [name]);
 
   return (
     <>

@@ -3,11 +3,9 @@ import { useEffect, useState } from "react";
 export default function SetTimer() {
   //declare a time variable that has the current time
   const [time, setTime] = useState(new Date().toLocaleTimeString());
-  const id = 1;
-  useEffect(() => {
-    //code
-  }, [id]);
 
+  //the callback function will only be executed once after the first
+  //rendering
   useEffect(() => {
     document.title = "Use useEffect to set a timer";
     //set a timer
@@ -17,7 +15,7 @@ export default function SetTimer() {
 
     //clearn up the timer when the compoment unmounts
     return () => {
-      setTimeout(timer);
+      clearInterval(timer);
     };
   }, []);
 
